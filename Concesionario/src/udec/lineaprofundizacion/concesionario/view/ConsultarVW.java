@@ -55,22 +55,27 @@ public class ConsultarVW extends BaseVW implements FacadeVW {
 		switch (seleccion) {
 		case "1":
 			listInventario = consultarCR.consultarInventario(Integer.parseInt(seleccion));
+			mostrarVehiculos(listInventario);
 			setFlagMenu(0);
 			break;
 		case "2":
 			listInventario = consultarCR.consultarInventario(Integer.parseInt(seleccion));
+			mostrarVehiculos(listInventario);
 			setFlagMenu(0);
 			break;
 		case "3":
 			listInventario = consultarCR.consultarInventario(Integer.parseInt(seleccion));
+			mostrarVehiculos(listInventario);
 			setFlagMenu(0);
 			break;
 		case "4":
 			listInventario = consultarCR.consultarInventario(Integer.parseInt(seleccion));
+			mostrarVehiculos(listInventario);
 			setFlagMenu(0);
 			break;
 		case "5":
 			listInventario = consultarCR.consultarInventario();
+			mostrarVehiculos(listInventario);
 			setFlagMenu(0);
 			break;
 		case "6":
@@ -81,7 +86,7 @@ public class ConsultarVW extends BaseVW implements FacadeVW {
 			setFlagMenu(0);
 			break;
 		}
-		mostrarVehiculos(listInventario);
+		
 
 	}
 	
