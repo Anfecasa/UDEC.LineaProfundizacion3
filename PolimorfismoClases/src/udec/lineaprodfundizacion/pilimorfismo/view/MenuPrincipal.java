@@ -10,16 +10,44 @@ import udec.lineaprodfundizacion.pilimorfismo.entities.Jet;
 import udec.lineaprodfundizacion.pilimorfismo.entities.SkateBoard;
 import udec.lineaprodfundizacion.pilimorfismo.entities.Vehicle;
 
+/**
+ * clase que representra el menu principal de la aplicacion
+ * @author Andres Cadena
+ *
+ */
+
 public class MenuPrincipal {
-
+	
+	/**
+	 * flag que indica si muestra o no el menu
+	 */
+	
 	private int flagMenu = 0;
+	
+	/**
+	 * objeto que permito obtener los inputs del teclado
+	 */
+	
 	private Scanner scanner;
+	
+	/**
+	 * lista que almacena los vahiculos
+	 */
+	
 	private List<Vehicle> listVehicle;
-
+	
+	/**
+	 * constructor de la clase
+	 */
+	
 	public MenuPrincipal() {
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * metodo que muestra el menu de la aplicacion
+	 */
+	
 	public void mostrarMenu() {
 		scanner = new Scanner(System.in);
 		while (flagMenu == 0) {
@@ -35,7 +63,12 @@ public class MenuPrincipal {
 		}
 
 	}
-
+	
+	/**
+	 * metodo que procesa la seleccion del menu
+	 * @param seleccion
+	 */
+	
 	public void procesarSeleccion(String seleccion) {
 		switch (seleccion) {
 		case "1":
@@ -60,7 +93,11 @@ public class MenuPrincipal {
 			break;
 		}
 	}
-
+	
+	/**
+	 * metodo que crea los objetos vehiculo
+	 */
+	
 	public void crearObjetos() {
 		listVehicle = new ArrayList<Vehicle>();
 		listVehicle.add(new Bicycle("Pinarello", "Dogma F10", 24));
@@ -68,7 +105,11 @@ public class MenuPrincipal {
 		listVehicle.add(new Car("Lamborghini", "Aventador", "Extra", 5000));
 		listVehicle.add(new Jet("Airbus", "ACJ319 Elegance", "ATF", 2));
 	}
-
+	
+	/**
+	 * metodo que imprime los objetos de la lista
+	 */
+	
 	public void imprimirObjejetos() {
 		if (listVehicle == null || listVehicle.size() == 0) {
 			System.out.println("**********************************************************");
@@ -107,15 +148,21 @@ public class MenuPrincipal {
 		}
 
 	}
-
+	
 	/**
-	 * getters y setters de las variables de la clase
+	 * metodo que obtoene el valor de la variable flagMenu
+	 * @return flagMenu
 	 */
 
 	public int getFlagMenu() {
 		return flagMenu;
 	}
 
+	/**
+	 * metodo que asigna valor a la variable flagMenu	
+	 * @param flagMenu
+	 */
+	
 	public void setFlagMenu(int flagMenu) {
 		this.flagMenu = flagMenu;
 	}
