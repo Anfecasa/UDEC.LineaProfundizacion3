@@ -81,4 +81,17 @@ public class PruebasUnitarias {
 		
 	}
 	
+	@Test
+	public void pruebaAbueloHijoSinNietos() {
+		
+		System.out.println("**********************************************************");
+		System.out.println("************ PRUEBA ABUELO HIJO SIN NIETOS ***************");
+		System.out.println("**********************************************************");
+		
+		MenuPrincipal menuPrincipal = new MenuPrincipal();
+		menuPrincipal.crearObjetos();
+		menuPrincipal.imprimirPersona(9);
+		
+	}
+		
 }
