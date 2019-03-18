@@ -151,7 +151,7 @@ public class MenuPrincipal {
 	 * metodo que crea los objetos persona y lo guarda en los map
 	 */
 	
-	private void crearObjetos() {
+	public void crearObjetos() {
 		
 		// padre 1
 		Persona personaPadre1 = new Persona(1, "Andres");
@@ -237,7 +237,7 @@ public class MenuPrincipal {
 	 * @param id
 	 */
 	
-	private void imprimirPersona(int id) {
+	public void imprimirPersona(int id) {
 
 		if (mapAbuelos.containsKey(id)) {
 
