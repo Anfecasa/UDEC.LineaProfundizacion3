@@ -3,6 +3,8 @@
  */
 package udec.lineaprofundizacion.mapas.test;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -49,9 +51,15 @@ public class PruebasUnitarias {
 		System.out.println("******************** PRUEBA ABUELO ***********************");
 		System.out.println("**********************************************************");
 		
+		int id = 10;
+		int idEsperado = 0;
+		
+		
 		MenuPrincipal menuPrincipal = new MenuPrincipal();
 		menuPrincipal.crearObjetos();
-		menuPrincipal.imprimirPersona(10);
+		idEsperado = menuPrincipal.imprimirPersona(id);
+		
+		assertEquals(idEsperado, id);
 		
 	}
 	
@@ -62,10 +70,15 @@ public class PruebasUnitarias {
 		System.out.println("********************* PRUEBA PADRE ***********************");
 		System.out.println("**********************************************************");
 		
+		int id = 5;
+		int idEsperado = 0;
+		
 		MenuPrincipal menuPrincipal = new MenuPrincipal();
 		menuPrincipal.crearObjetos();
-		menuPrincipal.imprimirPersona(5);
+		idEsperado = menuPrincipal.imprimirPersona(5);
 		
+		assertEquals(idEsperado, id);
+				
 	}
 	
 	@Test
@@ -75,9 +88,14 @@ public class PruebasUnitarias {
 		System.out.println("*********************** PRUEBA NIETO *********************");
 		System.out.println("**********************************************************");
 		
+		int id = 3;
+		int idEsperado = 0;
+		
 		MenuPrincipal menuPrincipal = new MenuPrincipal();
 		menuPrincipal.crearObjetos();
-		menuPrincipal.imprimirPersona(3);
+		idEsperado = menuPrincipal.imprimirPersona(3);
+		
+		assertEquals(idEsperado, id);
 		
 	}
 	
@@ -88,9 +106,14 @@ public class PruebasUnitarias {
 		System.out.println("************ PRUEBA ABUELO HIJO SIN NIETOS ***************");
 		System.out.println("**********************************************************");
 		
+		int id = 9;
+		int idEsperado = 0;
+		
 		MenuPrincipal menuPrincipal = new MenuPrincipal();
 		menuPrincipal.crearObjetos();
-		menuPrincipal.imprimirPersona(9);
+		idEsperado = menuPrincipal.imprimirPersona(9);
+		
+		assertEquals(idEsperado, id);
 		
 	}
 		

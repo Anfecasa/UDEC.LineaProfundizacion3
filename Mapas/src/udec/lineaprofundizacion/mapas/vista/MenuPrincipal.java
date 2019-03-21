@@ -237,7 +237,7 @@ public class MenuPrincipal {
 	 * @param id
 	 */
 	
-	public void imprimirPersona(int id) {
+	public int imprimirPersona(int id) {
 
 		if (mapAbuelos.containsKey(id)) {
 
@@ -252,7 +252,9 @@ public class MenuPrincipal {
 			imprimirMapAbuelo(mapAbuelos.get(id).getMapFamilia());
 
 			System.out.println("**********************************************************");
-
+			
+			return id;
+			
 		} else {
 
 			for (Integer idAbuelo : mapAbuelos.keySet()) {
@@ -276,7 +278,9 @@ public class MenuPrincipal {
 					System.out.println("* Tiene los siguientes hijos : ");
 
 					imprimirMapPadre(mapAbuelos.get(idAbuelo).getMapFamilia().get(id).getMapFamilia());
-
+					
+					return id;
+					
 				} else {
 
 					for (Integer idHijo : mapAbuelos.get(idAbuelo).getMapFamilia().keySet()) {
@@ -298,7 +302,9 @@ public class MenuPrincipal {
 
 							System.out.println("* Id del Abuelo     : " + mapAbuelos.get(idAbuelo).getId());
 							System.out.println("* Nombre del Abuelo : " + mapAbuelos.get(idAbuelo).getNombre());
-
+							
+							return id;
+							
 						}
 
 					}
@@ -308,7 +314,9 @@ public class MenuPrincipal {
 			}
 
 		}
-
+		
+		return 0;
+		
 	}
 	
 	/**
